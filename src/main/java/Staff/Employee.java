@@ -16,6 +16,12 @@ public abstract class Employee {
         return name;
     }
 
+    public void setname(String name) {
+        if(name != null) {
+            this.name = name;
+        }
+    }
+
     public String getNiNumber() {
         return niNumber;
     }

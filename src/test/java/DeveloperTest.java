@@ -20,6 +20,18 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canChangeName() {
+        developer.setname("Harold");
+        assertEquals("Harold", developer.getName());
+    }
+
+    @Test
+    public void cantSetNameNull() {
+        developer.setname(null);
+        assertEquals("Jeb", developer.getName());
+    }
+
+    @Test
     public void developerHasNiNumber() {
         assertEquals("784ydf92h", developer.getNiNumber());
     }

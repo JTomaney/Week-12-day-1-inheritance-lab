@@ -20,6 +20,18 @@ public class DbAdminTest {
     }
 
     @Test
+    public void canChangeName() {
+        dbAdmin.setname("Harold");
+        assertEquals("Harold", dbAdmin.getName());
+    }
+
+    @Test
+    public void cantSetNameNull() {
+        dbAdmin.setname(null);
+        assertEquals("Jeb", dbAdmin.getName());
+    }
+
+    @Test
     public void dbAdminHasNiNumber() {
         assertEquals("784ydf92h", dbAdmin.getNiNumber());
     }
